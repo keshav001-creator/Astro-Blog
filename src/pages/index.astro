@@ -1,12 +1,9 @@
 ---
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
 const pageTitle = "Home Page";
 ---
-
-
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
-
 
 <html lang="en">
 	<head>
@@ -17,13 +14,19 @@ const pageTitle = "Home Page";
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 		<style>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
-    </style>
+			h1 {
+				color: purple;
+				font-size: 4rem;
+			}
+		</style>
 	</head>
 	<body>
+		<Header />
 		<h1>{pageTitle}</h1>
+
+		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
 	</body>
 </html>
